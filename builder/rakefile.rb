@@ -25,6 +25,7 @@ CONFIG = YAML.load_file('SoftwareFactory/config.yaml')
 APPNAME = CONFIG['app_name']
 SERVER = CONFIG['server']
 PROVPROFILE_ID = CONFIG['provisioning_profile']
+STOREPATH = CONFIG['store_path']
 
 # evaluate pathes
 PROVPROFILE_FILE = "SoftwareFactory/#{PROVPROFILE_ID}.mobileprovision"
@@ -98,7 +99,7 @@ end
 
 PLIST_FILE = "#{DIR}/#{APPNAME}.plist"
 file PLIST_FILE => DIR do
-  url_prefix= "http://#{SERVER}/apps/#{APPNAME}/#{CONFIG['CFBundleVersion']}/"
+  url_prefix= "http://#{SERVER}#{STOREPATH}/apps/#{APPNAME}/#{CONFIG['CFBundleVersion']}/"
   data = {'items', ['assets'=> [{'kind' => 'software-package', 'url' => "#{url_prefix}#{APPNAME}.ipa"},
                                 {'kind' => 'full-size-image', 'needs-shine' => true, 'url' => "#{url_prefix}iTunesArtwork.jpg"},
                                 {'kind' => 'display-image', 'needs-shine' => true, 'url' => "#{url_prefix}#{CONFIG['CFBundleIconFiles'][0]}"}],

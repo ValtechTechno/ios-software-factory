@@ -16,6 +16,7 @@ clone_folder: '../privatebuild'
 server: 'MY_SERVER'
 user: 'USER'
 ssh_path: '~/.ssh/id_rsa'
+store_path: '/mobilestore'
 www_path: '/var/www/mobilestore'
 
 # other bundle informations
