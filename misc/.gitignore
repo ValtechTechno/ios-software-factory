@@ -1,0 +1,6 @@
+.DS_Store
+xcuserdata
+build/
+pkg/
+*.tgz
+Logs
