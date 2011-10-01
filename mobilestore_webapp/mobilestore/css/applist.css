@@ -1,0 +1,7 @@
+.applist .version{position:absolute;top:50px;left:80px;width:60;height:12px;font-size:12px;display:block!important}
+.applist .plateform{position:absolute;top:50px;right:0px;width:160px;height:12px;font-size:12px;display:block!important;}
+.applist .udid{position:absolute;top:25px;left:5px;width:auto;height:12px;font-size:14px;display:block!important}
+.applist .udidname{position:absolute;left:5px;top:25px;position:absolute;font-size:17px;font-weight:bold;text-shadow:#eee 0 1px 0;color:#000}
+.applist li#udid{height:40px} 
+.applist .button {position: absolute;width: 100px!important;height: 25px!important;right: 20px;top: 22px;margin: 0!important;padding-top: 3px;text-align: center;background: url("../pics/greenButton.png") 0 0 no-repeat;}
+.applist .header{position:absolute;left:5px;top:15px;width:auto;position:absolute;text-shadow:#eee 0 1px 0;text-align:center;color:#000}
