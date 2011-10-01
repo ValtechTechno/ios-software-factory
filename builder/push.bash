@@ -41,7 +41,7 @@ fi
 
 ORIGIN=$(git remote -v | awk '$1=="origin" && $3=="(push)" {print $2}')
 
-log "git fetch, commit all  and rebase"
+log_section "git fetch, commit all  and rebase"
 
 git fetch
 git add -A; git ls-files --deleted -z | xargs -0 -I {} git rm {}; git commit -m "wip"
@@ -72,7 +72,7 @@ fi
 
 cd $CLONE_FOLDER
 
-log "rake package"
+log_section "rake package"
 
 #rake build test package
 rake package | awk -f SoftwareFactory/logFilter.awk 
@@ -83,7 +83,7 @@ if [ $BUILD_RESULT -ne 0 ]; then
 	exit_ko "Unable to build"
 fi
 
-log "git push"
+log_section "git push"
 
 git push $ORIGIN $BRANCH
 if [ $? -ne 0 ]; then
