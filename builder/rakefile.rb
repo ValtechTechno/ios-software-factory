@@ -63,9 +63,9 @@ end
 desc("Launch test")
 task :test do
   puts "TEST application #{APPNAME}"
-  command = "xcodebuild -project \"#{APPNAME}.xcodeproj\" -target \"#{APPNAME}Tests\" -sdk iphonesimulator -configuration \"Release\" CODE_SIGN_IDENTITY=\"#{CONFIG['sign']}\" TEST_HOST= $LOG_FILTER_PIPE"
+  command = "xcodebuild -project \"#{APPNAME}.xcodeproj\" -target \"#{APPNAME}Tests\" -sdk iphonesimulator -configuration \"Release\" CODE_SIGN_IDENTITY=\"#{CONFIG['sign']}\" TEST_HOST= "
   #command = "xcodebuild -project \"#{APPNAME}.xcodeproj\" -target \"#{APPNAME}Tests\" -sdk iphonesimulator -configuration \"Release\" CODE_SIGN_IDENTITY=\"#{CONFIG['sign']}\" TEST_HOST=build/Release-iphoneos/#{APPNAME}.app/#{APPNAME}"
-  sh "#{command} build"
+  sh "#{command} build $LOG_FILTER_PIPE"
 end
 
 abbreviated_commit_hash = `git log -1 --pretty=format:%h`
