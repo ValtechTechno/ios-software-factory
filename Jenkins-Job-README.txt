@@ -27,15 +27,15 @@ Configuration
 ===================
 
 A sample job is provided.
-Copy the sample-jenkins-job directory into the job directory of jenkins. You may have to restart Jenkins.
+Copy the Sample-IOS-Job directory into the job directory of jenkins. You may have to restart Jenkins.
 For instance
 ---
 ll ../../CIServer/jenkins/jobs/
 total 0
 drwxr-xr-x@  4 cfalguiere  staff   136  1 oct 11:31 ./
 drwxr-xr-x@ 31 cfalguiere  staff  1054  1 oct 11:32 ../
-drwx------  10 cfalguiere  staff   340  1 oct 10:37 SoftShakeDemo/
-drwx------  10 cfalguiere  staff   340  1 oct 11:35 sample-jenkins-job/
+drwx------  10 cfalguiere  staff   340  1 oct 10:37 OtherJenkinsJob/
+drwx------  10 cfalguiere  staff   340  1 oct 11:35 Sample-IOS-Job/
 ---
 The sample load downloads and build the SoftShakeDemo. The demo includes the builder scripts.
 
