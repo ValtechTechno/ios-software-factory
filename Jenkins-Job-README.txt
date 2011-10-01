@@ -23,6 +23,14 @@ OCUnit2JUnit can be downloaded at https://github.com/ciryon/OCUnit2JUnit/blob/ma
 
 
 ===================
+WARNING
+===================
+
+checker-255 does not work with XCode default compiler Apple LLVM compiler 3.0
+LLVM GCC 4.2 and GCC 4.2 work fine.
+New features like ARC does not work with GCC 4.2.
+
+===================
 Configuration
 ===================
 
