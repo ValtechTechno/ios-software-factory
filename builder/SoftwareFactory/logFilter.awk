@@ -1,6 +1,9 @@
-# Author : Claude Falguiere
-# Date : July 2011
-# Project : IPadCorporate
+# logFilter.awk was written by Claude Falguiere
+#
+# Description
+# filter out some of the xcode tools outputs and repetitive outputs
+# used by rakefile.rb
+
 BEGIN { 
 	emptyLines = 0 
 	memStep = ""

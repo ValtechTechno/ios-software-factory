@@ -1,5 +1,17 @@
 #!/bin/bash
 
+# publish.bash was written Claude Falguiere
+#
+# Usage:
+# publish.bash PROJECT_NAME BUNDLE_VERSION RHOST WWW_PATH KEY_PATH
+#
+# Description
+# rsync the app bundle with the enterprise mobile store
+#
+# Dependencies
+# config.yaml, publish.bash, logFilter.awk
+#
+
 source SoftwareFactory/common.bash
 SCRIPT_NAME="Publish"
 

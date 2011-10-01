@@ -1,4 +1,17 @@
 #!/bin/bash
+#
+# push.bash was written by David Gageot and modified by Claude Falguiere
+#
+# Usage:
+# ./push.bash
+#
+# Description
+# based on the "unbreakable build" from David Gageot
+# clone the repository, merge with other developer changes, build the project and push to the remote repository if build is successful
+#
+# Dependencies
+# rakefile.rb, config.yaml, common.bash
+#
 
 source SoftwareFactory/common.bash
 

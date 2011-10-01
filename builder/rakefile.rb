@@ -1,4 +1,18 @@
-# sudo gem install json plist 
+
+# rakefile.rb was written by Sylvain Rousseau and modified by Claude Falguiere
+#
+# Usage:
+# rake clean build test package deploy
+#
+# Description
+# use the XCode command line tools to build, test and package
+# add additional step to build and rsync a bundle for the enterprise mobile store
+#
+# Dependencies
+# config.yaml, publish.bash, logFilter.awk
+#
+
+# sudo gem install json plist
 require 'rubygems'
 require 'rake/classic_namespace'
 require 'rake/clean'

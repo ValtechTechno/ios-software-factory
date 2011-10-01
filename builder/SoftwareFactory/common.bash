@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# common.bash was written by Claude Falguiere
+#
+# Usage:
+# source common.bash
+#
+# Description
+# common initialisation and tasks for other scripts
+
 ### Common Initializations
 
 PROJECT_NAME=`grep "^app_name:" SoftwareFactory/config.yaml | sed "s/app_name: '\(.*\)'/\1/"`
