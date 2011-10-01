@@ -1,0 +1,8 @@
+This projets contains
+
+- builder : a set of rake ans shell scripts to build, test and package the iOS app
+- a sample jenkins job
+- a generic mobile store to distribute the bundle "for enterprise"
+- misc scripts and resources
+
+See *-README.txt for each module
