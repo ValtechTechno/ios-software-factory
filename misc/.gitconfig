@@ -1,0 +1,32 @@
+[user]
+	name = YOUR NAME
+	email = YOUR EMAIL
+[diff]
+	renamelimit = 0
+[merge]
+	conflictstyle = merge
+[color]
+	ui = auto
+[help]
+	autocorrect = 10
+[alias]
+	undo = reset --hard "HEAD~1"
+	uncommit = reset "HEAD~1"
+	redo = reset --hard "HEAD@{1}"
+	ignore = !"echo \"$@\" >> .gitignore"
+	wip = !"git add -A; git ls-files --deleted -z | xargs -0 - I {} git rm {}; git commit -m \"wip\""
+	unwip = !"git log -n 1 | grep -q -c wip && git reset HEAD~1"
+	rb = !"git wip;git rebase -i --autosquash origin/master;git unwip;git heads"
+	pr = !"git fetch;git wip;git rebase --stat origin/master;git unwip;git heads"
+	lg = !"git log --graph --branches --oneline --graph --decorate | awk '{while(1){print;if($0~/origin/)exit;next}}'"
+	st = status
+	br = branch
+	co = checkout
+	cp = cherry-pick
+	lost = !"git fsck | awk '/dangling commit/ {print $3}' | git show --format='SHA1: %C(yellow)%h%Creset %f' --stdin | awk '/SHA1/ {sub(\"SHA1: \", \"\"); print}'"
+	heads = !"git log origin/master.. --format='%Cred%h%Creset;%C(yellow)%an%Creset;%H;%Cblue%f%Creset' | git name-rev --stdin --always --name-only | column -t -s';'"
+	merged-commits = !"sh -c 'git rev-list --oneline --no-merges $0^2 ^$0^1'"
+[rerere]
+	enabled = 1
+[difftool]
+	prompt = false
